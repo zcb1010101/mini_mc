@@ -105,3 +105,8 @@ js/animals.js       # 机器人实体系统：Robot 基类、ScoutBot/HeavyBot �
 
 - 玩家出生点为 `(5.4, -27, 22.6)`，位于世界底面之下，依靠 `game.js` 中的虚空保护（`y < -10` 时传送至 y=50）实现"天降"落至地面。
 - `COZE_CYAN` 方块类型与纹理为早期"粉色文字墙"方案的遗留定义，当前文字墙使用树叶方块搭建。
+
+## 运行时注意
+
+- 不能双击 index.html 直接打开（file:// 协议）。浏览器出于 CORS 安全策略，禁止在 file:// 下加载 ES Module，游戏会白屏。必须通过 HTTP 服务器访问（python -m http.server 就可以）。
+- Three.js 走 CDN（importmap 指向 jsdelivr），运行时需要联网。断网环境下即使本地起了服务器也加载不出引擎。
