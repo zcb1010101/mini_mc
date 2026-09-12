@@ -1,0 +1,14 @@
+[project]
+entrypoint = "index.html"
+requires = [ "python-3.12" ]
+template = "native-static"
+version = "0.0.21"
+appliedPatches = [ ]
+
+[dev]
+build = [ ]
+run = [ "sh", "-c", "python -m http.server ${DEPLOY_RUN_PORT} --bind 0.0.0.0" ]
+
+[deploy]
+build = [ ]
+run = [ "sh", "-c", "python -m http.server ${DEPLOY_RUN_PORT} --bind 0.0.0.0" ]
