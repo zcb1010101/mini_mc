@@ -1,4 +1,4 @@
-# 像素方块世界 (Voxel Block World)
+# 像素方块世界 (Voxel Block World)————mini mc
 
 基于 Three.js 的 3D 像素风格方块世界探索游戏。原生 HTML + CSS + JavaScript (ES Module) 实现，无需构建步骤，支持桌面端（键鼠）与移动端（触控）。
 
@@ -70,7 +70,6 @@ styles/main.css     # HUD、开始画面、触控 UI、响应式布局
 js/noise.js         # 带种子的 2D Simplex 噪声 + FBM 分形叠加
 js/voxel.js         # 体素引擎核心：方块定义、纹理图集、Chunk/World、地形与文字立墙生成
 js/animals.js       # 机器人实体系统：Robot 基类、ScoutBot/HeavyBot 模型与 AI、生成管理
-assets/             # 开发过程截图（已 gitignore，不参与运行）
 ```
 
 ### 模块说明
@@ -102,7 +101,7 @@ assets/             # 开发过程截图（已 gitignore，不参与运行）
 | `TEXT_BASE_Y` | 19 | 立墙底部 Y |
 | `TEXT_FLAT_RADIUS_X` / `_Z` | 22 / 10 | 广场 X/Z 方向半径 |
 
-## 已知实现细节
+## 已知部分实现细节
 
 - 玩家出生点为 `(5.4, -27, 22.6)`，位于世界底面之下，依靠 `game.js` 中的虚空保护（`y < -10` 时传送至 y=50）实现"天降"落至地面。
 - `COZE_CYAN` 方块类型与纹理为早期"粉色文字墙"方案的遗留定义，当前文字墙使用树叶方块搭建。
